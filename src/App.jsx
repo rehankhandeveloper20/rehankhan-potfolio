@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
 
+import image1 from "./assets/image1.png";
+import image2 from "./assets/image2.png";
+
 function App() {
   const heroRef = useRef(null);
   const alterRef = useRef(null);
@@ -120,32 +123,20 @@ function App() {
 
   return (
     <main className="portfolio">
-      {/* =========================================
-          CUSTOM CURSOR
-      ========================================= */}
-
       <div
         className={`custom-cursor ${cursorVisible ? "visible" : ""} ${
           cursorHover ? "hovering" : ""
         }`}
       >
         <span className="cursor-dot" />
-
         <span className="cursor-ring" />
-
         <span className="cursor-label">MOVE</span>
       </div>
 
-      {/* =========================================
-          NORMAL WORLD
-      ========================================= */}
-
+      {/* NORMAL WORLD */}
       <section ref={heroRef} className="hero normal-world">
         <div className="intro-cover" />
-
         <div className="frame" />
-
-        {/* TOP BAR */}
 
         <header className="top-bar">
           <div className="brand">REHAN KHAN</div>
@@ -161,8 +152,6 @@ function App() {
           </nav>
         </header>
 
-        {/* BACKGROUND TITLE */}
-
         <div className="background-title">
           <span>FULL STACK</span>
 
@@ -171,13 +160,9 @@ function App() {
           <span>CYBERSECURITY</span>
         </div>
 
-        {/* PORTRAIT */}
-
         <div className="portrait">
-          <img src="/src/assets/image1.png" alt="Rehan Khan" />
+          <img src={image1} alt="Rehan Khan" />
         </div>
-
-        {/* LEFT EDITORIAL */}
 
         <div className="editorial left-editorial">
           <div className="editorial-meta">
@@ -210,8 +195,6 @@ function App() {
           </a>
         </div>
 
-        {/* RIGHT EDITORIAL */}
-
         <div className="editorial right-editorial">
           <div className="editorial-meta">
             <span>REHAN</span>
@@ -237,8 +220,6 @@ function App() {
           </p>
         </div>
 
-        {/* SIDE LABELS */}
-
         <div className="side-label side-label-left">
           FULL STACK / CYBERSECURITY
         </div>
@@ -246,8 +227,6 @@ function App() {
         <div className="side-label side-label-right">
           REHAN KHAN / CREATIVE DEVELOPER
         </div>
-
-        {/* BOTTOM LABELS */}
 
         <div className="bottom-left">BASED IN INDIA</div>
 
@@ -256,17 +235,12 @@ function App() {
         <div className="bottom-right">SCROLL TO EXPLORE ↓</div>
       </section>
 
-      {/* =========================================
-          ALTER WORLD
-      ========================================= */}
-
+      {/* ALTER WORLD */}
       <section
         ref={alterRef}
         className={`hero alter-world ${active ? "is-active" : ""}`}
       >
         <div className="frame" />
-
-        {/* TOP BAR */}
 
         <header className="top-bar">
           <div className="brand">REHAN KHAN</div>
@@ -282,8 +256,6 @@ function App() {
           </nav>
         </header>
 
-        {/* BACKGROUND TITLE */}
-
         <div className="background-title">
           <span>FULL STACK</span>
 
@@ -292,16 +264,9 @@ function App() {
           <span>CYBERSECURITY</span>
         </div>
 
-        {/* ALTER PORTRAIT */}
-
         <div className="portrait">
-          <img
-            src="/src/assets/image2.png"
-            alt="Rehan Khan alternate portrait"
-          />
+          <img src={image2} alt="Rehan Khan alternate portrait" />
         </div>
-
-        {/* ALTER LEFT EDITORIAL */}
 
         <div className="editorial left-editorial">
           <div className="editorial-meta">
@@ -334,8 +299,6 @@ function App() {
           </a>
         </div>
 
-        {/* ALTER RIGHT EDITORIAL */}
-
         <div className="editorial right-editorial">
           <div className="editorial-meta">
             <span>REHAN</span>
@@ -361,8 +324,6 @@ function App() {
           </p>
         </div>
 
-        {/* SIDE LABELS */}
-
         <div className="side-label side-label-left">
           FULL STACK / CYBERSECURITY
         </div>
@@ -370,8 +331,6 @@ function App() {
         <div className="side-label side-label-right">
           REHAN KHAN / CREATIVE DEVELOPER
         </div>
-
-        {/* BOTTOM LABELS */}
 
         <div className="bottom-left">BASED IN INDIA</div>
 
